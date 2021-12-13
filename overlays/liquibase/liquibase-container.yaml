@@ -14,12 +14,12 @@ spec:
             - name: USERNAME
               valueFrom:
                 secretKeyRef:
-                  name: postgres
+                  name: person-db
                   key: database-user
             - name: PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: postgres
+                  name: person-db
                   key: database-password
             - name: CHANGELOGFILE
               value: changeLog.sql

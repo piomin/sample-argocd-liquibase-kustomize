@@ -21,15 +21,15 @@ spec:
             - name: DATABASE_USER
               valueFrom:
                 secretKeyRef:
-                  name: postgres
+                  name: person-db
                   key: database-user
             - name: DATABASE_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: postgres
+                  name: person-db
                   key: database-password
             - name: DATABASE_NAME
               valueFrom:
                 secretKeyRef:
-                  name: postgres
+                  name: person-db
                   key: database-name
