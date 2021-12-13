@@ -10,7 +10,7 @@ spec:
           image: docker.io/piomin/liquibase:latest
           env:
             - name: URL
-              value: jdbc:postgresql://postgres:5432/sampledb
+              value: jdbc:postgresql://person-db:5432/sampledb
             - name: USERNAME
               valueFrom:
                 secretKeyRef:

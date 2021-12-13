@@ -14,6 +14,22 @@ spec:
     spec:
       containers:
         - name: sample-spring
-          image: quay.io/pminkows/sample-spring:1.4.3
+          image: quay.io/pminkows/person-app:1.0
           ports:
             - containerPort: 8080
+          env:
+            - name: DATABASE_USER
+              valueFrom:
+                secretKeyRef:
+                  name: postgres
+                  key: database-user
+            - name: DATABASE_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: postgres
+                  key: database-password
+            - name: DATABASE_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: postgres
+                  key: database-name
